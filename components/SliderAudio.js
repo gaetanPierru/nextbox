@@ -23,9 +23,13 @@ export default function SliderAudio() {
 
   const selectMusic = (e) => {
     const index = Number(e.currentTarget.dataset.id);
-    console.log(allMusics[index].src);
+    //console.log(allMusics[index].src);
     setCurrentMusic(allMusics[index].src);
   };
+
+  function afficheCurrent(current){
+    return typeof current == "string" ? current : " ";
+  }
 
   return (
     <>
@@ -58,6 +62,9 @@ export default function SliderAudio() {
         ))}
       </Swiper>
       <AudioPlayer music={currentMusic}/>
+      <p className={Style.right}>
+            {afficheCurrent(currentMusic)}
+      </p>
     </>
   );
 }

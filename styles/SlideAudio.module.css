@@ -35,3 +35,7 @@
 .title {
   z-index: 10;
 }
+
+.right {
+  text-align:right;
+}
