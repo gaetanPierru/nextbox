@@ -1,10 +1,10 @@
 import React from 'react'
+import Style from '../styles/AudioPlayer.module.css'
 
 export default function AudioPlayer(music) {
-  console.log(music)
   return (
     <>
-        <audio src={`assets/musics/${music.music.src}`} controls></audio>
+        <audio src={`assets/musics/${music.music}`} controls className={Style.audio}></audio>
     </>
   )
 }

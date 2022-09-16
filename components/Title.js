@@ -7,7 +7,7 @@ export default function Title(props) {
       <div>
         Bienvenu <span className={styleTitle.titleName}>{props.name}</span>
       </div>
-      <p>Bonsoir je suis heureux</p>
+      <p>to the Next_Box</p>
     </>
   );
 }
