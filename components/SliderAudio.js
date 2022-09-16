@@ -24,11 +24,17 @@ export default function SliderAudio() {
   const selectMusic = (e) => {
     const index = Number(e.currentTarget.dataset.id);
     //console.log(allMusics[index].src);
-    setCurrentMusic(allMusics[index].src);
+    setCurrentMusic(allMusics[index]);
   };
 
-  function afficheCurrent(current){
-    return typeof current == "string" ? current : " ";
+  function afficheCurrent(current) {
+    console.log(current);
+    return typeof current == "string" ? current : "";
+  }
+
+  function afficheCurrentImage(current) {
+    console.log(current);
+    return typeof current == "string" ? current : "/ ";
   }
 
   return (
@@ -44,9 +50,9 @@ export default function SliderAudio() {
         className={Style.swiper}
       >
         {allMusics.map((music, index) => (
-          <SwiperSlide className={Style.swiperSlide} key={index} >
+          <SwiperSlide className={Style.swiperSlide} key={index}>
             {
-              <Image 
+              <Image
                 //   src="http://placeimg.com/640/640/any"
                 src={music.img}
                 alt={music.title}
@@ -61,10 +67,26 @@ export default function SliderAudio() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <AudioPlayer music={currentMusic}/>
+      <AudioPlayer music={currentMusic.src} />
       <p className={Style.right}>
-            {afficheCurrent(currentMusic)}
+        <b> {afficheCurrent(currentMusic.src)} </b>
       </p>
+      <div className={Style.Vinyle_vinyle__43n1V}>
+        <Image
+          src="/../public/assets/images/vinyle.png"
+          width="300"
+          height="300"
+          alt="test"
+        />
+        <div className={Style.Vinyle_cover__jyqpE}>
+        <Image
+            src={ afficheCurrentImage(currentMusic.img)}
+            width="300"
+            height="300"
+            alt="test"
+          />
+        </div>
+      </div>
     </>
   );
 }

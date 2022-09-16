@@ -39,3 +39,35 @@
 .right {
   text-align:right;
 }
+
+.Vinyle_vinyle__43n1V{
+  position: relative;
+  max-width: 300px;
+  max-height: 300px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: tourner infinite linear 6s;
+}
+
+@keyframes tourner {
+  from {
+    transform: rotate(360deg);
+    }
+  to {
+    transform: rotate(0deg);
+    }
+}
+
+.Vinyle_cover__jyqpE {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50%;
+  height: 50%;
+  background-color: pink;
+  z-index: 1;
+}

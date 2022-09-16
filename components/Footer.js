@@ -17,7 +17,8 @@ export default function Footer() {
           </span>{" "}
           Explored by Gaetan
         </a>
-        <Link href="about">about </Link>
+        
+        <Link href="about"> about </Link>
       </footer>
     </>
   );
