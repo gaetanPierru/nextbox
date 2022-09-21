@@ -9,7 +9,7 @@ export default function Vinyle({props}) {
       <div className={Style.vinyle}>
        <div className={Style.Vinyle_vinyle__43n1V}>
         <Image
-          src="/../public/assets/images/vinyle.png"
+          src="../public/assets/images/vinyle.png"
           width="300"
           height="300"
           alt="test"
