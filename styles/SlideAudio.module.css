@@ -34,40 +34,34 @@
 
 .title {
   z-index: 10;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: center;
+  transition: .3s;
 }
 
 .right {
   text-align:right;
 }
 
-.Vinyle_vinyle__43n1V{
-  position: relative;
-  max-width: 300px;
-  max-height: 300px;
+.h2 {
   display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  animation: tourner infinite linear 6s;
+    background-color: hsla(0,0%,100%,.3);
+    padding: 5px 10px;
+    border-radius: 8px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    color: #ff4500;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 50%);
 }
 
-@keyframes tourner {
-  from {
-    transform: rotate(360deg);
-    }
-  to {
-    transform: rotate(0deg);
-    }
-}
-
-.Vinyle_cover__jyqpE {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
-  overflow: hidden;
-  width: 50%;
-  height: 50%;
-  background-color: pink;
-  z-index: 1;
+.h2:hover {
+  transform: scale(1.3);
+  z-index: 2;
 }
